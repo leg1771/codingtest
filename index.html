@@ -6,16 +6,18 @@
     <body>
         <script>
             function solution(a, b, c){
-               let answer;
-                if(a<b) answer = a;
-                else answer = b;
-                if(c<answer) answer = c;
-
-                return answer;
-            }   
-           
-            console.log(solution(10 ,30,13));
-           
+                if(
+                Math.pow(a,2) === Math.pow(b,2)+Math.pow(c,2)||
+                Math.pow(b,2) === Math.pow(a,2)+Math.pow(c,2)||
+                Math.pow(c,2) === Math.pow(a,2)+Math.pow(b,2)
+                ) {
+                    return "YES"
+                }
+                else {
+                    return 'NO'
+                }
+            }
+            console.log(solution(13, 41, 17));
         </script>
     </body>
 </html>
